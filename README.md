@@ -2,6 +2,9 @@
 
 App web local para convertir archivos a Markdown con MarkItDown y usar Ollama de forma opcional.
 
+<img width="2559" height="1406" alt="imagen" src="https://github.com/user-attachments/assets/09aeab04-9c24-4aea-b5cd-0602ca2a9887" />
+
+
 ## Uso
 
 ```powershell
