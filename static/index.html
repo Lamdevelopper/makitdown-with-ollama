@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MarkItDown Local</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="topbar">
+        <div>
+          <h1>MarkItDown Local</h1>
+          <p>Convierte archivos a Markdown en tu PC.</p>
+        </div>
+        <div id="ollamaBadge" class="badge">Revisando Ollama...</div>
+      </section>
+
+      <section class="workspace">
+        <div class="left">
+          <form id="convertForm">
+            <label id="dropzone" class="dropzone">
+              <input id="fileInput" type="file" name="files" multiple />
+              <span class="dropTitle">Arrastra archivos aqui</span>
+              <span class="dropSub">o haz clic para seleccionarlos</span>
+            </label>
+
+            <div id="fileList" class="fileList"></div>
+
+            <div class="options">
+              <label class="toggle">
+                <input id="useOllama" type="checkbox" />
+                <span>Usar Ollama</span>
+              </label>
+              <select id="modelSelect" disabled>
+                <option value="">Sin modelos detectados</option>
+              </select>
+            </div>
+
+            <button id="convertButton" type="submit">Convertir</button>
+          </form>
+
+          <section id="progressPanel" class="progressPanel" hidden>
+            <div class="progressTop">
+              <strong id="progressTitle">Preparando conversion</strong>
+              <span id="progressPercent">0%</span>
+            </div>
+            <div class="progressTrack">
+              <div id="progressBar" class="progressBar"></div>
+            </div>
+            <div id="progressMeta" class="progressMeta">En cola</div>
+          </section>
+
+          <div id="results" class="results"></div>
+        </div>
+
+        <div class="right">
+          <div class="previewHeader">
+            <strong id="previewTitle">Preview Markdown</strong>
+            <button id="copyButton" type="button" disabled>Copiar</button>
+          </div>
+          <pre id="preview" class="preview">Selecciona un resultado para verlo aqui.</pre>
+        </div>
+      </section>
+    </main>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>

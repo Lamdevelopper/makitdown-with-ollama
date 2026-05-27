@@ -1,0 +1,1 @@
+Markdown crudo aunque Ollama falle
